@@ -5,7 +5,6 @@ export interface BlogPost {
   content: string;
   author: string;
   publishedAt: string;
-  updatedAt?: string;
   tags: string[];
   category: string;
   readTime: number;
