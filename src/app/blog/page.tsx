@@ -29,7 +29,7 @@ export default function BlogPage() {
   const allTags = getAllTags();
   const featuredPosts = getFeaturedPosts();
 
-  // 过滤和搜索文章
+  // Filter and search articles
   const filteredPosts = useMemo(() => {
     return searchPosts({
       query: searchQuery,
@@ -51,35 +51,35 @@ export default function BlogPage() {
     <div className="min-h-screen bg-white py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* 页面标题 */}
+          {/* Page Title */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">博客</h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
             <p className="text-lg text-gray-600">
-              YouTube Shorts 数据分析、爬虫技术和内容创作的专业见解
+              Professional insights on YouTube Shorts data analysis, crawler technology, and content creation
             </p>
           </div>
 
-          {/* 搜索和筛选栏 */}
+          {/* Search and Filter Bar */}
           <div className="mb-8 space-y-4">
             <div className="flex flex-col lg:flex-row gap-4">
-              {/* 搜索框 */}
+              {/* Search Box */}
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                 <Input
-                  placeholder="搜索文章、标签或关键词..."
+                  placeholder="Search articles, tags, or keywords..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
 
-              {/* 分类筛选 */}
+              {/* Category Filter */}
               <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                 <SelectTrigger className="w-full lg:w-48">
-                  <SelectValue placeholder="选择分类" />
+                  <SelectValue placeholder="Select Category" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">所有分类</SelectItem>
+                  <SelectItem value="all">All Categories</SelectItem>
                   {categories.map((category) => (
                     <SelectItem key={category.id} value={category.id}>
                       {category.name} ({category.count})
@@ -88,22 +88,22 @@ export default function BlogPage() {
                 </SelectContent>
               </Select>
 
-              {/* 排序 */}
+              {/* Sort Options */}
               <Select value={sortBy} onValueChange={(value) => setSortBy(value as 'newest' | 'oldest' | 'popular')}>
                 <SelectTrigger className="w-full lg:w-48">
-                  <SelectValue placeholder="排序方式" />
+                  <SelectValue placeholder="Sort By" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="newest">最新发布</SelectItem>
-                  <SelectItem value="oldest">最早发布</SelectItem>
-                  <SelectItem value="popular">最受欢迎</SelectItem>
+                  <SelectItem value="newest">Newest</SelectItem>
+                  <SelectItem value="oldest">Oldest</SelectItem>
+                  <SelectItem value="popular">Most Popular</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
-            {/* 标签筛选 */}
+            {/* Tag Filter */}
             <div className="flex flex-wrap gap-2">
-              <span className="text-sm text-gray-600 py-1">标签筛选:</span>
+              <span className="text-sm text-gray-600 py-1">Filter by tags:</span>
               {allTags.slice(0, 10).map((tag) => (
                 <Button
                   key={tag}
@@ -118,11 +118,11 @@ export default function BlogPage() {
             </div>
           </div>
 
-          {/* 标签页 */}
+          {/* Tabs */}
           <Tabs defaultValue="all" className="mb-8">
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="all">所有文章 ({filteredPosts.length})</TabsTrigger>
-              <TabsTrigger value="featured">精选文章 ({featuredPosts.length})</TabsTrigger>
+              <TabsTrigger value="all">All Articles ({filteredPosts.length})</TabsTrigger>
+              <TabsTrigger value="featured">Featured Articles ({featuredPosts.length})</TabsTrigger>
             </TabsList>
 
             <TabsContent value="all" className="mt-6">
@@ -146,7 +146,7 @@ export default function BlogPage() {
                           </Badge>
                           {post.featured && (
                             <Badge className="text-xs bg-yellow-100 text-yellow-800">
-                              精选
+                              Featured
                             </Badge>
                           )}
                         </div>
@@ -163,7 +163,7 @@ export default function BlogPage() {
                           <User className="w-3 h-3 mr-1" />
                           <span className="mr-4">{post.author}</span>
                           <Clock className="w-3 h-3 mr-1" />
-                          <span className="mr-4">{post.readTime} 分钟阅读</span>
+                          <span className="mr-4">{post.readTime} min read</span>
                           <span>{format(new Date(post.publishedAt), 'yyyy-MM-dd')}</span>
                         </div>
 
@@ -192,10 +192,10 @@ export default function BlogPage() {
                     <Search className="w-12 h-12 text-gray-400" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    未找到相关文章
+                    No articles found
                   </h3>
                   <p className="text-gray-600">
-                    尝试调整搜索条件或清除筛选器
+                    Try adjusting your search criteria or clearing filters
                   </p>
                   <Button
                     onClick={() => {
@@ -206,7 +206,7 @@ export default function BlogPage() {
                     className="mt-4"
                     variant="outline"
                   >
-                    清除所有筛选
+                    Clear All Filters
                   </Button>
                 </div>
               )}
@@ -233,7 +233,7 @@ export default function BlogPage() {
                               {categories.find(c => c.id === post.category)?.name}
                             </Badge>
                             <Badge className="text-xs bg-yellow-100 text-yellow-800">
-                              精选
+                              Featured
                             </Badge>
                           </div>
 
@@ -249,7 +249,7 @@ export default function BlogPage() {
                             <User className="w-3 h-3 mr-1" />
                             <span className="mr-4">{post.author}</span>
                             <Clock className="w-3 h-3 mr-1" />
-                            <span className="mr-4">{post.readTime} 分钟阅读</span>
+                            <span className="mr-4">{post.readTime} min read</span>
                             <span>{format(new Date(post.publishedAt), 'yyyy-MM-dd')}</span>
                           </div>
 
@@ -270,23 +270,23 @@ export default function BlogPage() {
             </TabsContent>
           </Tabs>
 
-          {/* 统计信息 */}
+          {/* Statistics */}
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
             <Card className="p-4 text-center">
               <div className="text-2xl font-bold text-blue-600">{allPosts.length}</div>
-              <div className="text-sm text-gray-600">总文章数</div>
+              <div className="text-sm text-gray-600">Total Articles</div>
             </Card>
             <Card className="p-4 text-center">
               <div className="text-2xl font-bold text-green-600">{categories.length}</div>
-              <div className="text-sm text-gray-600">分类数量</div>
+              <div className="text-sm text-gray-600">Categories</div>
             </Card>
             <Card className="p-4 text-center">
               <div className="text-2xl font-bold text-purple-600">{allTags.length}</div>
-              <div className="text-sm text-gray-600">标签数量</div>
+              <div className="text-sm text-gray-600">Tags</div>
             </Card>
             <Card className="p-4 text-center">
               <div className="text-2xl font-bold text-orange-600">{featuredPosts.length}</div>
-              <div className="text-sm text-gray-600">精选文章</div>
+              <div className="text-sm text-gray-600">Featured</div>
             </Card>
           </div>
         </div>
