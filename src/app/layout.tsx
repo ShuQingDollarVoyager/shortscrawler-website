@@ -63,7 +63,6 @@ export default function RootLayout({
             `,
           }}
         />
-
         {/* Microsoft Clarity */}
         <script
           dangerouslySetInnerHTML={{
@@ -76,7 +75,6 @@ export default function RootLayout({
             `,
           }}
         />
-
         {/* Google AdSense */}
         <script
           async
