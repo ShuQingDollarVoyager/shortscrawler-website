@@ -20,7 +20,8 @@ export async function generateStaticParams() {
   return [
     { slug: 'youtube-shorts-data-analysis-tips' },
     { slug: 'youtube-shorts-crawler-setup-guide' },
-    { slug: 'youtube-shorts-trends-2025' }
+    { slug: 'youtube-shorts-trends-2025' },
+    { slug: 'shortscrawler-vs-apify-comparison' }
   ];
 }
 
