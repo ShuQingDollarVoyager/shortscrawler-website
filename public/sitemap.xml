@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://shortscrawler.com/</loc>
+  <lastmod>2025-08-16T14:11:12+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://shortscrawler.com/features</loc>
+  <lastmod>2025-08-16T14:11:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shortscrawler.com/installation</loc>
+  <lastmod>2025-08-16T14:11:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shortscrawler.com/usage</loc>
+  <lastmod>2025-08-16T14:11:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shortscrawler.com/faq</loc>
+  <lastmod>2025-08-16T14:11:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shortscrawler.com/about</loc>
+  <lastmod>2025-08-16T14:11:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shortscrawler.com/blog</loc>
+  <lastmod>2025-08-16T14:11:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://shortscrawler.com/blog/youtube-shorts-data-analysis-tips</loc>
+  <lastmod>2025-08-16T14:11:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shortscrawler.com/blog/youtube-shorts-crawler-setup-guide</loc>
+  <lastmod>2025-08-16T14:11:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://shortscrawler.com/blog/youtube-shorts-trends-2025</loc>
+  <lastmod>2025-08-16T14:11:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
